@@ -36,5 +36,6 @@ jobs:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           BQ_DATASET: ${{ secrets.BQ_DATASET }}
           GOOGLE_APPLICATION_CREDENTIALS: secrets/brasileirao-bi-sa.json
+          BQ_LOCATION: southamerica-east1
         run: |
           PYTHONPATH=src python -m brasileirao_bi.etl.pipeline --all
