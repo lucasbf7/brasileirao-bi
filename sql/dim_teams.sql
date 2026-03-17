@@ -8,7 +8,7 @@ SELECT DISTINCT
   LOWER(team_abbr) AS team_abbr_lower,
 
   CONCAT(
-    'https://raw.githubusercontent.com/lucasbf7/vasco-bi/main/assets/badges/',
+    'https://raw.githubusercontent.com/lucasbf7/brasileirao-bi/main/assets/badges/',
     UPPER(team_abbr),
     '.png'
   ) AS badge_url

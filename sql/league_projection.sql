@@ -7,13 +7,13 @@ WITH base AS (
     team_short_name,
     team_abbr,
 
-    points_so_far        AS pontos_atuais,
+    points_so_far AS pontos_atuais,
     projected_points_total AS pontos_projetados,
-    games_remaining      AS jogos_restantes,
-    projected_ppj_total  AS ppj_estimado,
+    games_remaining AS jogos_restantes,
+    projected_ppj_total AS ppj_estimado,
     destino,
 
-    CURRENT_TIMESTAMP()  AS updated_at
+    CURRENT_TIMESTAMP() AS updated_at
   FROM `{project_id}.{dataset}.fact_projection_micro`
   WHERE season = 2026
 ),
@@ -52,4 +52,7 @@ ranked AS (
   FROM base b
   LEFT JOIN season_stats s USING (team_id)
 )
-SELECT * FROM ranked;
+SELECT
+  *,
+  (posicao_projetada - posicao_atual) AS delta_posicao
+FROM ranked;
