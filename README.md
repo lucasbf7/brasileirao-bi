@@ -179,9 +179,9 @@ A projeção usa uma abordagem heurística e interpretável, baseada em:
 ### 📚 Documentação complementar
 
 Veja também:
-    - `docs/metrics.md`
-    - `docs/data_model.md`
-    - `docs/decisions/001-ppj-model.md`
+- `docs/metrics.md`
+- `docs/data_model.md`
+- `docs/decisions/001-ppj-model.md`
 
 ### 🔭 Próximos passos
 - melhorar a governança e documentação do projeto
